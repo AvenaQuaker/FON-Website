@@ -1,4 +1,8 @@
 @import url("https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro");
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Bahnschrift", "Roboto Condensed";
   margin: 0;
@@ -75,6 +79,10 @@ section#carouselsec #carouselPres #carouseltitulo {
   letter-spacing: 1px;
   font-size: 5rem;
   font-weight: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+section#carouselsec #carouselPres #carouseltitulo:hover {
+  transform: scale(1.05);
 }
 section#carouselsec #carouselPres #carsomos {
   text-transform: uppercase;
@@ -173,6 +181,10 @@ section#sec1 .box .teamr img {
   height: 30rem;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+section#sec1 .box .teamr img:hover {
+  transform: scale(1.05) rotate(2deg);
 }
 section#sec1 .box:nth-of-type(even) {
   transform: translateX(-400%);
@@ -249,6 +261,121 @@ section#sec2 .goal .goalh1 {
   margin-left: 2rem;
   width: 7rem;
 }
+section#sec3 {
+  background: linear-gradient(270deg, #000643, #010522);
+  height: 80vh;
+  padding: 10vh;
+}
+section#sec3 .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateX(400%);
+  transition: transform 0.6s ease;
+}
+section#sec3 .box .sec3h1 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: #5de195;
+  margin: 0;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+section#sec3 .box .sec3h2 {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  color: rgb(255, 255, 255);
+  margin: 0;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+section#sec3 .box .contjuegos {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2rem;
+  margin-top: 9rem;
+}
+section#sec3 .box:nth-of-type(even) {
+  transform: translateX(-400%);
+}
+section#sec3 .box.show {
+  transform: translateX(0);
+}
+section#sec3 .card {
+  width: 16.6666666667rem;
+  height: 25rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 36px;
+  perspective: 2500px;
+  margin: 0 50px;
+}
+section#sec3 .cover-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section#sec3 .wrapper {
+  transition: all 0.5s;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+section#sec3 .card:hover .wrapper {
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+section#sec3 .wrapper::before,
+section#sec3 .wrapper::after {
+  content: "";
+  opacity: 0;
+  width: 100%;
+  height: 80px;
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
+}
+section#sec3 .wrapper::before {
+  top: 0;
+  height: 100%;
+  background-image: linear-gradient(to top, transparent 46%, rgba(12, 13, 19, 0.5) 68%, rgb(12, 13, 19) 97%);
+}
+section#sec3 .wrapper::after {
+  bottom: 0;
+  opacity: 1;
+  background-image: linear-gradient(to bottom, transparent 46%, rgba(12, 13, 19, 0.5) 68%, rgb(12, 13, 19) 97%);
+}
+section#sec3 .card:hover .wrapper::before,
+section#sec3 .wrapper::after {
+  opacity: 1;
+}
+section#sec3 .card:hover .wrapper::after {
+  height: 120px;
+}
+section#sec3 .title {
+  width: 100%;
+  transition: transform 0.5s;
+}
+section#sec3 .card:hover .title {
+  transform: translate3d(0%, -50px, 100px);
+}
+section#sec3 .character {
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  position: absolute;
+  z-index: -1;
+}
+section#sec3 .card:hover .character {
+  opacity: 1;
+  transform: translate3d(0%, -30%, 100px);
+}
+
 .navbar {
   font-family: "Neue Haas Grotesk Display Pro", sans-serif;
   display: flex;
@@ -285,5 +412,19 @@ section#sec2 .goal .goalh1 {
 }
 .navbar .contnav #navtit {
   font-size: 1.7rem;
+  font-weight: 700;
+}
+.navbar .contnav .lblnav {
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: rgb(255, 255, 255);
+  margin-left: 1rem;
+  margin-right: 1rem;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out, font-weight 0.1s ease-in-out;
+}
+.navbar .contnav .lblnav:hover {
+  transform: scale(1.1);
   font-weight: 700;
 }/*# sourceMappingURL=Main.css.map */
