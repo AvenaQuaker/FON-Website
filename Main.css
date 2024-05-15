@@ -123,7 +123,7 @@ section#sec1 {
 }
 section#sec1 .box {
   transform: translateX(400%);
-  transition: transform 0.4s ease;
+  transition: transform 0.6s ease;
   display: flex;
   flex-direction: row;
   gap: 4rem;
@@ -187,27 +187,29 @@ section#sec2 {
   height: 80vh;
 }
 section#sec2 img {
-  width: 60%;
+  width: 65%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 section#sec2 .box {
   transform: translateX(400%);
-  transition: transform 0.4s ease;
+  transition: transform 0.6s ease;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   text-align: start;
-  padding: 2rem;
+  padding: 5rem;
   padding-left: 6rem;
   padding-right: 6rem;
+  gap: 1rem;
 }
 section#sec2 .box h1 {
   text-transform: uppercase;
   font-size: 2.5rem;
   color: rgb(0, 0, 0);
   margin: 0;
-  font-weight: 700;
+  font-weight: 650;
+  margin-bottom: 1rem;
 }
 section#sec2 .box label {
   letter-spacing: 1px;
@@ -220,7 +222,33 @@ section#sec2 .box:nth-of-type(even) {
 section#sec2 .box.show {
   transform: translateX(0);
 }
-
+section#sec2 .goal {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: 5rem;
+  background: #010522;
+  border-radius: 1rem;
+  color: #F5F5F5;
+  font-size: 1rem;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+section#sec2 .goal label {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+section#sec2 .goal .goalh1 {
+  letter-spacing: 1px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgb(47, 255, 141);
+  margin-left: 2rem;
+  width: 7rem;
+}
 .navbar {
   font-family: "Neue Haas Grotesk Display Pro", sans-serif;
   display: flex;
@@ -230,7 +258,7 @@ section#sec2 .box.show {
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
-  background: linear-gradient(180deg, rgb(0, 0, 0), transparent);
+  background: linear-gradient(180deg, rgb(0, 0, 0) 60%, transparent);
   z-index: 2;
 }
 .navbar .contnav {
