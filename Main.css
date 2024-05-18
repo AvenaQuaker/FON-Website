@@ -41,6 +41,57 @@ body ::-webkit-scrollbar-thumb {
   background-color: #ffffff;
 }
 
+.navbar {
+  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  color: #ffffff;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: linear-gradient(180deg, rgb(0, 0, 0) 60%, transparent);
+  z-index: 2;
+}
+.navbar .contnav {
+  display: flex;
+  flex-direction: row;
+  font-size: clamp(0.8rem, 1vw, 1.2rem);
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(1.5rem, 2vw, 2rem);
+}
+.navbar .contnav .navlog {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .contnav img {
+  padding: clamp(0.5rem, 0.8vw, 0.8rem);
+  height: clamp(2.5rem, 3vw, 3rem);
+  width: clamp(2.5rem, 3vw, 3rem);
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.navbar .contnav #navtit {
+  font-size: clamp(1.3rem, 1.7vw, 1.7rem);
+  font-weight: 700;
+}
+.navbar .contnav .lblnav {
+  font-size: clamp(0.8rem, 1.2vw, 1.2rem);
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out, font-weight 0.1s ease-in-out;
+}
+.navbar .contnav .lblnav:hover {
+  transform: scale(1.1);
+  font-weight: 700;
+}
+
 section {
   height: 60vh;
   font-family: "Neue Haas Grotesk Display Pro", sans-serif;
@@ -50,9 +101,9 @@ section #carlogo {
   background: url(Resources/LogoMinimalistaFON.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 7rem;
-  width: 7rem;
-  margin-bottom: 1rem;
+  height: clamp(4rem, 7vw, 7rem);
+  width: clamp(4rem, 7vw, 7rem);
+  margin-bottom: clamp(0.5rem, 1vw, 1rem);
   filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
 }
 section#carouselsec {
@@ -74,12 +125,12 @@ section#carouselsec #carouselPres {
   justify-content: center;
 }
 section#carouselsec #carouselPres label {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 1.7vw, 1.7rem);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 section#carouselsec #carouselPres #carouseltitulo {
   letter-spacing: 1px;
-  font-size: 5rem;
+  font-size: clamp(2.5rem, 5vw, 5rem);
   font-weight: 1000;
   transition: transform 0.3s ease-in-out;
 }
@@ -90,7 +141,7 @@ section#carouselsec #carouselPres #carsomos {
   text-transform: uppercase;
   color: rgb(5, 212, 112);
   letter-spacing: 1px;
-  font-size: 2rem;
+  font-size: clamp(1.2rem, 2vw, 2rem);
   font-weight: 700;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -382,57 +433,4 @@ section#sec3 .character {
 section#sec3 .card:hover .character {
   opacity: 1;
   transform: translate3d(0%, -30%, 100px);
-}
-
-.navbar {
-  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
-  display: flex;
-  flex-direction: row;
-  position: fixed;
-  color: #ffffff;
-  width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
-  background: linear-gradient(180deg, rgb(0, 0, 0) 60%, transparent);
-  z-index: 2;
-}
-.navbar .contnav {
-  display: flex;
-  flex-direction: row;
-  font-size: 1.2rem;
-  font-weight: 600;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-}
-.navbar .contnav .navlog {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.navbar .contnav img {
-  padding: 0.8rem;
-  height: 3rem;
-  width: 3rem;
-  -o-object-fit: fill;
-     object-fit: fill;
-}
-.navbar .contnav #navtit {
-  font-size: 1.7rem;
-  font-weight: 700;
-}
-.navbar .contnav .lblnav {
-  font-size: 1.2rem;
-  font-weight: 500;
-  letter-spacing: 1px;
-  color: rgb(255, 255, 255);
-  margin-left: 1rem;
-  margin-right: 1rem;
-  text-decoration: none;
-  transition: transform 0.3s ease-in-out, font-weight 0.1s ease-in-out;
-}
-.navbar .contnav .lblnav:hover {
-  transform: scale(1.1);
-  font-weight: 700;
 }/*# sourceMappingURL=Main.css.map */
