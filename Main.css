@@ -1,6 +1,8 @@
 @import url("https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro");
-html {
+* {
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -121,10 +123,12 @@ section#carouselsec #carouselImg .contimg::before {
 }
 section#sec1 {
   display: flex;
-  height: 70vh;
+  height: -moz-max-content;
+  height: max-content;
   background: linear-gradient(90deg, #000643, #010522);
-  padding-left: 15%;
-  padding-right: 15%;
+  padding: clamp(2rem, 5vw, 5rem);
+  padding-right: clamp(3rem, 5vw, 10rem);
+  padding-left: clamp(3rem, 5vw, 10rem);
   color: white;
   justify-content: center;
   align-items: center;
@@ -142,20 +146,21 @@ section#sec1 .box .teaml {
   text-align: start;
 }
 section#sec1 .box .teaml h2 {
-  font-size: 2rem;
+  font-size: clamp(1rem, 2vw, 2rem);
   color: rgb(176, 176, 176);
   margin: 0;
   font-weight: 600;
 }
 section#sec1 .box .teaml h1 {
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 3vw, 3rem);
   color: white;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
 }
 section#sec1 .box .teaml label {
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
   letter-spacing: 1px;
-  line-height: 1.5rem;
+  line-height: clamp(1rem, 2vw, 2rem);
   margin-bottom: 2rem;
 }
 section#sec1 .box .teaml button {
@@ -175,13 +180,17 @@ section#sec1 .box .teaml button:hover {
   background-color: rgb(0, 219, 48);
   color: white;
 }
+section#sec1 .box .teamr {
+  display: flex;
+}
 section#sec1 .box .teamr img {
   border-radius: 3rem;
-  width: 35rem;
-  height: 30rem;
+  width: clamp(10rem, 35vw, 35rem);
+  height: clamp(10rem, 45vh, 45rem);
   -o-object-fit: cover;
      object-fit: cover;
   transition: transform 0.3s ease-in-out;
+  align-self: center;
 }
 section#sec1 .box .teamr img:hover {
   transform: scale(1.05) rotate(2deg);
@@ -196,11 +205,12 @@ section#sec2 {
   display: flex;
   flex-direction: row;
   background: white;
-  height: 80vh;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 section#sec2 img {
-  width: 65%;
-  height: 100%;
+  width: clamp(30%, 45vw, 50%);
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -210,23 +220,21 @@ section#sec2 .box {
   display: flex;
   flex-direction: column;
   text-align: start;
-  padding: 5rem;
-  padding-left: 6rem;
-  padding-right: 6rem;
+  padding: clamp(2rem, 5vw, 5rem);
   gap: 1rem;
 }
 section#sec2 .box h1 {
   text-transform: uppercase;
-  font-size: 2.5rem;
+  font-size: clamp(1rem, 2.5vw, 2.5rem);
   color: rgb(0, 0, 0);
   margin: 0;
   font-weight: 650;
   margin-bottom: 1rem;
 }
 section#sec2 .box label {
+  text-align: start;
   letter-spacing: 1px;
-  line-height: 1.5rem;
-  margin-bottom: 2rem;
+  line-height: clamp(1rem, 1.5vw, 1.5rem);
 }
 section#sec2 .box:nth-of-type(even) {
   transform: translateX(-400%);
@@ -238,7 +246,7 @@ section#sec2 .goal {
   display: flex;
   flex-direction: row;
   width: 90%;
-  height: 5rem;
+  height: clamp(4rem, 5vw, 5rem);
   background: #010522;
   border-radius: 1rem;
   color: #F5F5F5;
@@ -251,15 +259,15 @@ section#sec2 .goal {
 section#sec2 .goal label {
   margin: 0;
   font-weight: 600;
-  font-size: 1.3rem;
+  font-size: clamp(0.5rem, 1.5vw, 1.5rem);
 }
 section#sec2 .goal .goalh1 {
   letter-spacing: 1px;
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 2.5vw, 2.5rem);
   font-weight: 700;
   color: rgb(47, 255, 141);
   margin-left: 2rem;
-  width: 7rem;
+  width: clamp(5rem, 7vw, 7rem);
 }
 section#sec3 {
   background: linear-gradient(270deg, #000643, #010522);

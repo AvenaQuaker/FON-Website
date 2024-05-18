@@ -1,7 +1,9 @@
 @import url('https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro');
 
-html{
+* {
     scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
 }
 
 body{
@@ -148,11 +150,11 @@ section{
 
     &#sec1{
         display: flex;
-        height: 70vh;
+        height: max-content;
         background: linear-gradient(90deg,#000643,#010522);
-        //padding: 5vh;
-        padding-left: 15%;
-        padding-right: 15%;
+        padding: clamp(2rem, 5vw, 5rem);
+        padding-right: clamp(3rem, 5vw, 10rem);
+        padding-left: clamp(3rem, 5vw, 10rem);
         color: white;
         justify-content: center;
         align-items: center;
@@ -170,22 +172,23 @@ section{
                 text-align: start;
 
                 h2{
-                    font-size: 2rem;
+                    font-size: clamp(1rem, 2vw, 2rem);
                     color: rgb(176, 176, 176);
                     margin: 0;
                     font-weight: 600;
                 }
 
                 h1{
-                    font-size: 3rem;
+                    font-size: clamp(1.5rem, 3vw, 3rem);
                     color: white;
                     margin-top: 0.5rem;
                     margin-bottom: 1rem;
                 }
 
                 label{
+                    font-size: clamp(1rem, 1.5vw, 1.5rem);
                     letter-spacing: 1px;
-                    line-height: 1.5rem;
+                    line-height: clamp(1rem, 2vw, 2rem);
                     margin-bottom: 2rem;
                 }
 
@@ -209,12 +212,15 @@ section{
             }
 
             .teamr{
+                display: flex;
+
                 img{
                     border-radius: 3rem;
-                    width: 35rem;
-                    height: 30rem;
+                    width: clamp(10rem, 35vw, 35rem);
+                    height: clamp(10rem, 45vh, 45rem);
                     object-fit: cover;
                     transition: transform 0.3s ease-in-out;
+                    align-self: center;
 
                     &:hover{
                         transform: scale(1.05) rotate(2deg);
@@ -236,11 +242,11 @@ section{
         display: flex;
         flex-direction: row;
         background:white;
-        height: 80vh;
+        height: fit-content;
 
         img{
-            width: 65%;
-            height: 100%;
+            width: clamp(30%, 45vw, 50%);
+            height: auto;
             object-fit: cover;
         }
 
@@ -250,14 +256,12 @@ section{
             display: flex;
             flex-direction: column;
             text-align: start;
-            padding: 5rem;
-            padding-left: 6rem;
-            padding-right: 6rem;
+            padding: clamp(2rem, 5vw, 5rem);
             gap: 1rem;
 
                 h1{
                     text-transform: uppercase;
-                    font-size: 2.5rem;
+                    font-size: clamp(1rem, 2.5vw, 2.5rem);
                     color: rgb(0, 0, 0);
                     margin: 0;
                     font-weight: 650;
@@ -265,9 +269,9 @@ section{
                 }
 
                 label{
+                    text-align: start;
                     letter-spacing: 1px;
-                    line-height: 1.5rem;
-                    margin-bottom: 2rem;
+                    line-height: clamp(1rem, 1.5vw, 1.5rem);
                 }
             }
 
@@ -283,7 +287,7 @@ section{
                 display: flex;
                 flex-direction: row;
                 width: 90%;
-                height: 5rem;
+                height: clamp(4rem, 5vw, 5rem);
                 background: #010522;
                 border-radius:1rem;
                 color: #F5F5F5;
@@ -296,21 +300,17 @@ section{
                 label{
                     margin: 0;
                     font-weight: 600;
-                    font-size: 1.3rem;
+                    font-size: clamp(0.5rem, 1.5vw, 1.5rem);
 
                 }
 
                 .goalh1{
                     letter-spacing: 1px;
-                    font-size: 2.5rem;
+                    font-size: clamp(1.8rem, 2.5vw, 2.5rem);
                     font-weight: 700;
                     color: rgb(47, 255, 141);
                     margin-left: 2rem;
-                    width: 7rem;
-                }
-
-                .goallbl{
-
+                    width: clamp(5rem, 7vw, 7rem);
                 }
             }
     }
