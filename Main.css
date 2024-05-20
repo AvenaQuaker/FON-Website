@@ -56,7 +56,7 @@ body ::-webkit-scrollbar-thumb {
 .navbar .contnav {
   display: flex;
   flex-direction: row;
-  font-size: clamp(0.8rem, 1vw, 1.2rem);
+  font-size: 1.2rem;
   font-weight: 600;
   justify-content: center;
   align-items: center;
@@ -80,7 +80,7 @@ body ::-webkit-scrollbar-thumb {
   font-weight: 700;
 }
 .navbar .contnav .lblnav {
-  font-size: clamp(0.8rem, 1.2vw, 1.2rem);
+  font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: 1px;
   color: rgb(255, 255, 255);
@@ -107,7 +107,7 @@ section #carlogo {
   filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
 }
 section#carouselsec {
-  height: 95vh;
+  height: clamp(50vh, 95vw, 95vh);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   overflow: hidden;
 }
@@ -117,7 +117,7 @@ section#carouselsec #carouselPres {
   color: white;
   position: absolute;
   text-align: center;
-  top: 50%;
+  top: clamp(30%, 50vw, 50%);
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -148,19 +148,18 @@ section#carouselsec #carouselPres #carsomos {
 section#carouselsec #carouselImg {
   display: flex;
   flex-direction: row;
-  width: 100%;
-  height: 100%;
   transform: translateX(0);
   transition: transform 0.8s ease-in-out;
 }
 section#carouselsec #carouselImg img {
+  width: 100vw;
+  height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
 }
 section#carouselsec #carouselImg .contimg {
-  height: 100%;
-  width: 100%;
   position: relative;
+  height: clamp(50vh, 95vw, 95vh);
 }
 section#carouselsec #carouselImg .contimg::before {
   content: "";
@@ -322,19 +321,21 @@ section#sec2 .goal .goalh1 {
 }
 section#sec3 {
   background: linear-gradient(270deg, #000643, #010522);
-  height: 80vh;
-  padding: 10vh;
+  height: -moz-max-content;
+  height: max-content;
+  padding: clamp(5rem, 8vw, 8rem);
 }
 section#sec3 .box {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   transform: translateX(400%);
   transition: transform 0.6s ease;
 }
 section#sec3 .box .sec3h1 {
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
   color: #5de195;
   margin: 0;
   font-weight: 700;
@@ -342,17 +343,35 @@ section#sec3 .box .sec3h1 {
 }
 section#sec3 .box .sec3h2 {
   text-transform: uppercase;
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
   color: rgb(255, 255, 255);
   margin: 0;
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin-bottom: clamp(2rem, 4vw, 4rem);
 }
 section#sec3 .box .contjuegos {
   display: flex;
   flex-direction: row;
-  margin-bottom: 2rem;
-  margin-top: 9rem;
+  margin-bottom: clamp(1rem, 2vw, 2rem);
+  margin-top: clamp(1rem, 2vw, 2rem);
+  gap: clamp(1rem, 2vw, 2rem);
+}
+section#sec3 .box button {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: clamp(0.5em, 0.8vw, 0.8em) clamp(1em, 1.3vw, 1.3em);
+  border: 4px solid #067f65;
+  transition: ease-in-out 0.3s;
+  background-color: transparent;
+  color: rgb(0, 219, 190);
+  font-weight: bolder;
+  font-size: clamp(1rem, 1.3vw, 1.3rem);
+}
+section#sec3 .box button:hover {
+  border: rgb(0, 219, 208);
+  transform: scale(1.1) rotate(5deg);
+  background-color: rgb(0, 219, 190);
+  color: white;
 }
 section#sec3 .box:nth-of-type(even) {
   transform: translateX(-400%);
@@ -361,15 +380,13 @@ section#sec3 .box.show {
   transform: translateX(0);
 }
 section#sec3 .card {
-  width: 16.6666666667rem;
-  height: 25rem;
+  width: clamp(5rem, 21.66vw, 21.66rem);
+  height: clamp(10rem, 30vw, 30rem);
   position: relative;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  padding: 0 36px;
   perspective: 2500px;
-  margin: 0 50px;
 }
 section#sec3 .cover-image {
   width: 100%;

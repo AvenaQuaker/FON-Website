@@ -15,7 +15,7 @@ let intervalo = setInterval(() => {
         idx = caruselimg.length - 1
     }
 
-    contcarusel.style.transform = `translateX(${-idx * 100}%)`
+    contcarusel.style.transform = `translateX(${-idx * 100}vw)`
 },6000); 
 
 // Funcion que anima y controlas las cajas en la ventana
