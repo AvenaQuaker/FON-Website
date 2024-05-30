@@ -1,8 +1,10 @@
 @import url("https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro");
+@import "https://unpkg.com/transition-style";
 * {
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
+  transition: all 0.2ms ease-in-out;
 }
 
 body {
@@ -254,7 +256,9 @@ section#sec1 .box.show {
 section#sec2 {
   display: flex;
   flex-direction: row;
-  background: white;
+  background: url(/Resources/FBSec2.png);
+  background-attachment: fixed;
+  background-size: cover;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -450,4 +454,47 @@ section#sec3 .character {
 section#sec3 .card:hover .character {
   opacity: 1;
   transform: translate3d(0%, -30%, 100px);
+}
+section#sec4 {
+  display: flex;
+  background: url(/Resources/FBSec2.png);
+  background-attachment: fixed;
+  background-size: cover;
+  justify-content: center;
+  padding: clamp(1rem, 3vw, 3rem);
+  padding-top: 6rem;
+  height: -moz-max-content;
+  height: max-content;
+}
+section#sec4 .contsec4 {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
+section#sec4 .contsec4 h3 {
+  text-transform: uppercase;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  color: rgb(0, 0, 0);
+  margin: 0;
+  font-weight: 300;
+}
+section#sec4 .contsec4 h1 {
+  text-transform: uppercase;
+  font-size: clamp(2rem, 3vw, 3rem);
+  color: rgb(0, 0, 0);
+  margin: 0;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+section#sec4 .contsec4 .cansec4 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+section#sec4 .contsec4 .cansec4 .clip {
+  width: 40rem;
+  height: 20rem;
+  background: black;
+  border: wheat;
+  flex: 2 0 30rem;
 }/*# sourceMappingURL=Main.css.map */
