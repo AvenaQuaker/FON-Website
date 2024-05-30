@@ -216,8 +216,6 @@ section{
         align-items: center;
 
         .box{
-            transform: translateX(400%);
-            transition: transform 0.6s ease;
             display: flex;
             flex-direction: row;
             gap:4rem;
@@ -284,14 +282,6 @@ section{
                 }
             }
         }
-
-        .box:nth-of-type(even) {
-            transform: translateX(-400%);
-        }
-        
-        .box.show {
-            transform: translateX(0);
-        }
     }
 
     &#sec2{
@@ -309,8 +299,6 @@ section{
         }
 
         .box{
-            transform: translateX(400%);
-            transition: transform 0.6s ease;
             display: flex;
             flex-direction: column;
             text-align: start;
@@ -331,14 +319,6 @@ section{
                     letter-spacing: 1px;
                     line-height: clamp(1rem, 1.5vw, 1.5rem);
                 }
-            }
-
-            .box:nth-of-type(even) {
-                transform: translateX(-400%);
-            }
-            
-            .box.show {
-                transform: translateX(0);
             }
 
             .goal{
@@ -383,8 +363,6 @@ section{
             flex-direction:column;
             align-items: center;
             text-align: center;
-            transform: translateX(400%);
-            transition: transform 0.6s ease;
 
             .sec3h1{
                 text-transform: uppercase;
@@ -429,14 +407,6 @@ section{
                     color: white;
                 }
             }
-        }
-
-        .box:nth-of-type(even) {
-            transform: translateX(-400%);
-        }
-        
-        .box.show {
-            transform: translateX(0);
         }
 
         .card {
@@ -538,9 +508,10 @@ section{
         justify-content: center;
         padding: clamp(1rem, 3vw, 3rem);
         padding-top: 6rem ;
+        padding-bottom: 6rem;
         height: max-content;
 
-            .contsec4{
+            .box{
                 display: flex;
                 flex-direction: column;
                 place-items: center;
@@ -579,4 +550,28 @@ section{
 
     }
         
+    &#sec5{
+        display: flex;
+        height: max-content;
+        background: linear-gradient(90deg,#000643,#010522);
+        padding: clamp(2rem, 5vw, 5rem);
+        padding-right: clamp(3rem, 5vw, 10rem);
+        padding-left: clamp(3rem, 5vw, 10rem);
+        color: white;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.box{
+    transform: translateX(400%);
+    transition: transform 0.6s ease;
+
+    &:nth-of-type(even) {
+        transform: translateX(-400%);
+    }
+    
+    &.show {
+        transform: translateX(0);
+    }
 }

@@ -186,8 +186,6 @@ section#sec1 {
   align-items: center;
 }
 section#sec1 .box {
-  transform: translateX(400%);
-  transition: transform 0.6s ease;
   display: flex;
   flex-direction: row;
   gap: 4rem;
@@ -247,12 +245,6 @@ section#sec1 .box .teamr img {
 section#sec1 .box .teamr img:hover {
   transform: scale(1.05) rotate(2deg);
 }
-section#sec1 .box:nth-of-type(even) {
-  transform: translateX(-400%);
-}
-section#sec1 .box.show {
-  transform: translateX(0);
-}
 section#sec2 {
   display: flex;
   flex-direction: row;
@@ -269,8 +261,6 @@ section#sec2 img {
      object-fit: cover;
 }
 section#sec2 .box {
-  transform: translateX(400%);
-  transition: transform 0.6s ease;
   display: flex;
   flex-direction: column;
   text-align: start;
@@ -289,12 +279,6 @@ section#sec2 .box label {
   text-align: start;
   letter-spacing: 1px;
   line-height: clamp(1rem, 1.5vw, 1.5rem);
-}
-section#sec2 .box:nth-of-type(even) {
-  transform: translateX(-400%);
-}
-section#sec2 .box.show {
-  transform: translateX(0);
 }
 section#sec2 .goal {
   display: flex;
@@ -334,8 +318,6 @@ section#sec3 .box {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  transform: translateX(400%);
-  transition: transform 0.6s ease;
 }
 section#sec3 .box .sec3h1 {
   text-transform: uppercase;
@@ -376,12 +358,6 @@ section#sec3 .box button:hover {
   transform: scale(1.1) rotate(5deg);
   background-color: rgb(0, 219, 190);
   color: white;
-}
-section#sec3 .box:nth-of-type(even) {
-  transform: translateX(-400%);
-}
-section#sec3 .box.show {
-  transform: translateX(0);
 }
 section#sec3 .card {
   width: clamp(5rem, 21.66vw, 21.66rem);
@@ -463,22 +439,23 @@ section#sec4 {
   justify-content: center;
   padding: clamp(1rem, 3vw, 3rem);
   padding-top: 6rem;
+  padding-bottom: 6rem;
   height: -moz-max-content;
   height: max-content;
 }
-section#sec4 .contsec4 {
+section#sec4 .box {
   display: flex;
   flex-direction: column;
   place-items: center;
 }
-section#sec4 .contsec4 h3 {
+section#sec4 .box h3 {
   text-transform: uppercase;
   font-size: clamp(1rem, 1.5vw, 1.5rem);
   color: rgb(0, 0, 0);
   margin: 0;
   font-weight: 300;
 }
-section#sec4 .contsec4 h1 {
+section#sec4 .box h1 {
   text-transform: uppercase;
   font-size: clamp(2rem, 3vw, 3rem);
   color: rgb(0, 0, 0);
@@ -486,15 +463,38 @@ section#sec4 .contsec4 h1 {
   font-weight: 700;
   margin-bottom: 3rem;
 }
-section#sec4 .contsec4 .cansec4 {
+section#sec4 .box .cansec4 {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
 }
-section#sec4 .contsec4 .cansec4 .clip {
+section#sec4 .box .cansec4 .clip {
   width: 40rem;
   height: 20rem;
   background: black;
   border: wheat;
   flex: 2 0 30rem;
+}
+section#sec5 {
+  display: flex;
+  height: -moz-max-content;
+  height: max-content;
+  background: linear-gradient(90deg, #000643, #010522);
+  padding: clamp(2rem, 5vw, 5rem);
+  padding-right: clamp(3rem, 5vw, 10rem);
+  padding-left: clamp(3rem, 5vw, 10rem);
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  transform: translateX(400%);
+  transition: transform 0.6s ease;
+}
+.box:nth-of-type(even) {
+  transform: translateX(-400%);
+}
+.box.show {
+  transform: translateX(0);
 }/*# sourceMappingURL=Main.css.map */
