@@ -248,7 +248,7 @@ section#sec1 .box .teamr img:hover {
 section#sec2 {
   display: flex;
   flex-direction: row;
-  background: url(/Resources/FBSec2.png);
+  background: url(Resources/FBSec2.png);
   background-attachment: fixed;
   background-size: cover;
   height: -moz-fit-content;
@@ -433,11 +433,11 @@ section#sec3 .card:hover .character {
 }
 section#sec4 {
   display: flex;
-  background: url(/Resources/FBSec2.png);
+  background: url(Resources/FBSec2.png);
   background-attachment: fixed;
   background-size: cover;
   justify-content: center;
-  padding: clamp(1rem, 3vw, 3rem);
+  padding: clamp(2rem, 6vw, 6rem);
   padding-top: 6rem;
   padding-bottom: 6rem;
   height: -moz-max-content;
@@ -453,7 +453,7 @@ section#sec4 .box h3 {
   font-size: clamp(1rem, 1.5vw, 1.5rem);
   color: rgb(0, 0, 0);
   margin: 0;
-  font-weight: 300;
+  font-weight: 400;
 }
 section#sec4 .box h1 {
   text-transform: uppercase;
@@ -469,11 +469,11 @@ section#sec4 .box .cansec4 {
   gap: 1rem;
 }
 section#sec4 .box .cansec4 .clip {
-  width: 40rem;
-  height: 20rem;
+  width: clamp(10rem, 20vw, 30rem);
+  height: clamp(25rem, 20vw, 20rem);
   background: black;
   border: wheat;
-  flex: 2 0 30rem;
+  flex: 1 0 40rem;
 }
 section#sec5 {
   display: flex;
