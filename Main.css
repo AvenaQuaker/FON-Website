@@ -4,7 +4,7 @@
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
-  transition: all 0.2ms ease-in-out;
+  box-sizing: border-box;
 }
 
 body {
@@ -12,7 +12,7 @@ body {
   margin: 0;
   padding: 0;
   background: #011522;
-  height: 300VH;
+  height: 300vh;
   align-items: center;
   justify-content: center;
 }
@@ -22,7 +22,7 @@ body::-webkit-scrollbar-track {
 }
 body::-webkit-scrollbar {
   width: 12px;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 body::-webkit-scrollbar-thumb {
   border-radius: 1rem;
@@ -35,7 +35,7 @@ body ::-webkit-scrollbar-track {
 }
 body ::-webkit-scrollbar {
   width: 7px;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 body ::-webkit-scrollbar-thumb {
   border-radius: 1rem;
@@ -50,10 +50,11 @@ body ::-webkit-scrollbar-thumb {
   position: fixed;
   color: #ffffff;
   width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: -moz-max-content;
+  height: max-content;
   background: linear-gradient(180deg, rgb(0, 0, 0) 60%, transparent);
   z-index: 2;
+  padding: 0.5rem 1rem;
 }
 .navbar .contnav {
   display: flex;
@@ -62,24 +63,31 @@ body ::-webkit-scrollbar-thumb {
   font-weight: 600;
   justify-content: center;
   align-items: center;
-  gap: clamp(1.5rem, 2vw, 2rem);
+  gap: 2.5dvw;
 }
 .navbar .contnav .navlog {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 1dvw;
 }
 .navbar .contnav img {
-  padding: clamp(0.5rem, 0.8vw, 0.8rem);
-  height: clamp(2.5rem, 3vw, 3rem);
-  width: clamp(2.5rem, 3vw, 3rem);
+  width: 2.7rem;
   -o-object-fit: fill;
      object-fit: fill;
+  transition: transform 0.2s linear;
+}
+.navbar .contnav img:hover {
+  transform: scale(1.05) rotate(2deg);
 }
 .navbar .contnav #navtit {
   font-size: clamp(1.3rem, 1.7vw, 1.7rem);
   font-weight: 700;
+  transition: transform 0.2s linear;
+}
+.navbar .contnav #navtit:hover {
+  transform: perspective(1000px) rotateX(10deg) rotateY(10deg) scale(1.1);
 }
 .navbar .contnav .lblnav {
   font-size: 1.2rem;
@@ -87,11 +95,10 @@ body ::-webkit-scrollbar-thumb {
   letter-spacing: 1px;
   color: rgb(255, 255, 255);
   text-decoration: none;
-  transition: transform 0.3s ease-in-out, font-weight 0.1s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 .navbar .contnav .lblnav:hover {
-  transform: scale(1.1);
-  font-weight: 700;
+  transform: translateY(-5px) scale(1.1);
 }
 
 section {
@@ -178,9 +185,7 @@ section#sec1 {
   height: -moz-max-content;
   height: max-content;
   background: linear-gradient(90deg, #000643, #010522);
-  padding: clamp(2rem, 5vw, 5rem);
-  padding-right: clamp(3rem, 5vw, 10rem);
-  padding-left: clamp(3rem, 5vw, 10rem);
+  padding: 8dvh 12dvw;
   color: white;
   justify-content: center;
   align-items: center;
@@ -196,19 +201,19 @@ section#sec1 .box .teaml {
   text-align: start;
 }
 section#sec1 .box .teaml h2 {
-  font-size: clamp(1rem, 2vw, 2rem);
+  font-size: 1.8dvw;
   color: rgb(176, 176, 176);
   margin: 0;
   font-weight: 600;
 }
 section#sec1 .box .teaml h1 {
-  font-size: clamp(1.5rem, 3vw, 3rem);
+  font-size: 2.5dvw;
   color: white;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
 }
 section#sec1 .box .teaml label {
-  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  font-size: 1dvw;
   letter-spacing: 1px;
   line-height: clamp(1rem, 2vw, 2rem);
   margin-bottom: 2rem;
@@ -287,7 +292,7 @@ section#sec2 .goal {
   height: clamp(4rem, 5vw, 5rem);
   background: #010522;
   border-radius: 1rem;
-  color: #F5F5F5;
+  color: #f5f5f5;
   font-size: 1rem;
   justify-content: start;
   align-items: center;
@@ -469,7 +474,7 @@ section#sec4 .box .cansec4 {
   gap: 1rem;
 }
 section#sec4 .box .cansec4 .clip {
-  width: clamp(10rem, 20vw, 30rem);
+  width: clamp(10rem, 19vw, 25rem);
   height: clamp(25rem, 20vw, 20rem);
   background: black;
   border: wheat;

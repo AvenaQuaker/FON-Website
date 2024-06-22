@@ -1,123 +1,127 @@
-@import url('https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro');
+@import url("https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro");
 @import "https://unpkg.com/transition-style";
 
 * {
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
-    transition: all 0.2ms ease-in-out;
+    box-sizing: border-box;
 }
 
-body{
+body {
     font-family: "Bahnschrift", "Roboto Condensed";
     margin: 0;
     padding: 0;
     background: #011522;
-    height: 300VH;
+    height: 300vh;
     align-items: center;
     justify-content: center;
 
-    &::-webkit-scrollbar-track
-    {
-        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
         background-color: #000000;
     }
 
-    &::-webkit-scrollbar
-    {
+    &::-webkit-scrollbar {
         width: 12px;
-        background-color: #F5F5F5;
+        background-color: #f5f5f5;
     }
 
-    &::-webkit-scrollbar-thumb
-    {
+    &::-webkit-scrollbar-thumb {
         border-radius: 1rem;
-        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
         background-color: #ffffff;
     }
 
-        ::-webkit-scrollbar-track
-        {
-            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-            background-color: #000000;
-        }
+    ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: #000000;
+    }
 
-        ::-webkit-scrollbar
-        {
-            width: 7px;
-            background-color: #F5F5F5;
-        }
+    ::-webkit-scrollbar {
+        width: 7px;
+        background-color: #f5f5f5;
+    }
 
-        ::-webkit-scrollbar-thumb
-        {
-            border-radius: 1rem;
-            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-            background-color: #ffffff;
-        }
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: #ffffff;
+    }
 }
 
-.navbar{
-    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+.navbar {
+    font-family: "Neue Haas Grotesk Display Pro", sans-serif;
     display: flex;
     flex-direction: row;
     position: fixed;
     color: #ffffff;
     width: 100%;
-    height: fit-content;
+    height: max-content;
     background: linear-gradient(180deg, rgb(0, 0, 0) 60%, transparent);
-    z-index:2;
+    z-index: 2;
+    padding: 0.5rem 1rem;
 
-    .contnav{
+    .contnav {
         display: flex;
         flex-direction: row;
         font-size: 1.2rem;
         font-weight: 600;
         justify-content: center;
         align-items: center;
-        gap: clamp(1.5rem, 2vw, 2rem);
+        gap: 2.5dvw;
 
-        .navlog{
+        .navlog {
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
+            gap: 1dvw;
         }
 
-        img{
-            padding: clamp(0.5rem, 0.8vw, 0.8rem);
-            height: clamp(2.5rem, 3vw, 3rem);
-            width: clamp(2.5rem, 3vw, 3rem);
+        img {
+            width: 2.7rem;
             object-fit: fill;
+            transition: transform 0.2s linear;
+
+            &:hover {
+                transform: scale(1.05) rotate(2deg);
+            }
         }
 
-        #navtit{
+        #navtit {
             font-size: clamp(1.3rem, 1.7vw, 1.7rem);
             font-weight: 700;
+            transition: transform 0.2s linear;
+
+            &:hover {
+                transform: perspective(1000px) rotateX(10deg) rotateY(10deg)
+                    scale(1.1);
+            }
         }
 
-        .lblnav{
+        .lblnav {
             font-size: 1.2rem;
             font-weight: 500;
             letter-spacing: 1px;
             color: rgb(255, 255, 255);
             text-decoration: none;
-            transition: transform 0.3s ease-in-out, font-weight 0.1s ease-in-out;
+            transition: transform 0.2s ease-in-out;
 
-            &:hover{
-                transform:scale(1.1);
-                font-weight: 700;
+            &:hover {
+                transform: translateY(-5px) scale(1.1);
             }
         }
     }
 }
 
-section{
+section {
     height: 60vh;
     //border: 1px solid rgb(255, 255, 255);
-    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    font-family: "Neue Haas Grotesk Display Pro", sans-serif;
     overflow: hidden;
 
-    #carlogo{
+    #carlogo {
         background: url(Resources/LogoMinimalistaFON.png);
         background-repeat: no-repeat;
         background-size: cover;
@@ -125,15 +129,14 @@ section{
         width: clamp(4rem, 7vw, 7rem);
         margin-bottom: clamp(0.5rem, 1vw, 1rem);
         filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
-        
     }
 
-    &#carouselsec{
+    &#carouselsec {
         height: clamp(50vh, 95vw, 95vh);
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
         overflow: hidden;
-    
-        #carouselPres{
+
+        #carouselPres {
             display: flex;
             flex-direction: column;
             color: white;
@@ -146,23 +149,23 @@ section{
             align-items: center;
             justify-content: center;
 
-            label{
-                font-size: clamp(1rem, 1.7vw, 1.7rem);;
+            label {
+                font-size: clamp(1rem, 1.7vw, 1.7rem);
                 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             }
 
-            #carouseltitulo{
+            #carouseltitulo {
                 letter-spacing: 1px;
                 font-size: clamp(2.5rem, 5vw, 5rem);
                 font-weight: 1000;
                 transition: transform 0.3s ease-in-out;
 
-                &:hover{
+                &:hover {
                     transform: scale(1.05);
                 }
             }
 
-            #carsomos{
+            #carsomos {
                 text-transform: uppercase;
                 color: rgb(5, 212, 112);
                 letter-spacing: 1px;
@@ -171,8 +174,8 @@ section{
                 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             }
         }
-        
-        #carouselImg{
+
+        #carouselImg {
             display: flex;
             flex-direction: row;
             transform: translateX(0);
@@ -184,69 +187,65 @@ section{
                 object-fit: cover;
             }
 
-            .contimg{
+            .contimg {
                 position: relative;
-                height: clamp(50vh, 95vw, 95vh);;
+                height: clamp(50vh, 95vw, 95vh);
 
-                &::before{
-                    content: '';
+                &::before {
+                    content: "";
                     width: 100%;
                     height: 100%;
                     top: 0;
                     right: 0;
                     position: absolute;
-                    background:linear-gradient(0deg, black,transparent);
+                    background: linear-gradient(0deg, black, transparent);
                     z-index: 1;
                 }
             }
-
-            
         }
     }
 
-    &#sec1{
+    &#sec1 {
         display: flex;
         height: max-content;
-        background: linear-gradient(90deg,#000643,#010522);
-        padding: clamp(2rem, 5vw, 5rem);
-        padding-right: clamp(3rem, 5vw, 10rem);
-        padding-left: clamp(3rem, 5vw, 10rem);
+        background: linear-gradient(90deg, #000643, #010522);
+        padding: 8dvh 12dvw;
         color: white;
         justify-content: center;
         align-items: center;
 
-        .box{
+        .box {
             display: flex;
             flex-direction: row;
-            gap:4rem;
+            gap: 4rem;
 
-            .teaml{
+            .teaml {
                 display: flex;
                 flex-direction: column;
                 text-align: start;
 
-                h2{
-                    font-size: clamp(1rem, 2vw, 2rem);
+                h2 {
+                    font-size: 1.8dvw;
                     color: rgb(176, 176, 176);
                     margin: 0;
                     font-weight: 600;
                 }
 
-                h1{
-                    font-size: clamp(1.5rem, 3vw, 3rem);
+                h1 {
+                    font-size: 2.5dvw;
                     color: white;
                     margin-top: 0.5rem;
                     margin-bottom: 1rem;
                 }
 
-                label{
-                    font-size: clamp(1rem, 1.5vw, 1.5rem);
+                label {
+                    font-size: 1dvw;
                     letter-spacing: 1px;
                     line-height: clamp(1rem, 2vw, 2rem);
                     margin-bottom: 2rem;
                 }
 
-                button{
+                button {
                     width: fit-content;
                     padding: 0.6em 1em;
                     border: 4px solid #247f06;
@@ -256,7 +255,7 @@ section{
                     font-weight: bolder;
                     font-size: 16px;
 
-                    &:hover{
+                    &:hover {
                         border: rgb(0, 219, 48);
                         transform: scale(1.1) rotate(5deg);
                         background-color: rgb(0, 219, 48);
@@ -265,10 +264,10 @@ section{
                 }
             }
 
-            .teamr{
+            .teamr {
                 display: flex;
 
-                img{
+                img {
                     border-radius: 3rem;
                     width: clamp(10rem, 35vw, 35rem);
                     height: clamp(10rem, 45vh, 45rem);
@@ -276,7 +275,7 @@ section{
                     transition: transform 0.3s ease-in-out;
                     align-self: center;
 
-                    &:hover{
+                    &:hover {
                         transform: scale(1.05) rotate(2deg);
                     }
                 }
@@ -284,7 +283,7 @@ section{
         }
     }
 
-    &#sec2{
+    &#sec2 {
         display: flex;
         flex-direction: row;
         background: url(Resources/FBSec2.png);
@@ -292,79 +291,78 @@ section{
         background-size: cover;
         height: fit-content;
 
-        img{
+        img {
             width: clamp(30%, 45vw, 50%);
             height: auto;
             object-fit: cover;
         }
 
-        .box{
+        .box {
             display: flex;
             flex-direction: column;
             text-align: start;
             padding: clamp(2rem, 5vw, 5rem);
             gap: 1rem;
 
-                h1{
-                    text-transform: uppercase;
-                    font-size: clamp(1rem, 2.5vw, 2.5rem);
-                    color: rgb(0, 0, 0);
-                    margin: 0;
-                    font-weight: 650;
-                    margin-bottom: 1rem;
-                }
-
-                label{
-                    text-align: start;
-                    letter-spacing: 1px;
-                    line-height: clamp(1rem, 1.5vw, 1.5rem);
-                }
+            h1 {
+                text-transform: uppercase;
+                font-size: clamp(1rem, 2.5vw, 2.5rem);
+                color: rgb(0, 0, 0);
+                margin: 0;
+                font-weight: 650;
+                margin-bottom: 1rem;
             }
 
-            .goal{
-                display: flex;
-                flex-direction: row;
-                width: 90%;
-                height: clamp(4rem, 5vw, 5rem);
-                background: #010522;
-                border-radius:1rem;
-                color: #F5F5F5;
-                font-size: 1rem;
-                justify-content: start;
-                align-items: center;
-                text-align: center;
-                gap: 1rem;
-
-                label{
-                    margin: 0;
-                    font-weight: 600;
-                    font-size: clamp(0.5rem, 1.5vw, 1.5rem);
-
-                }
-
-                .goalh1{
-                    letter-spacing: 1px;
-                    font-size: clamp(1.8rem, 2.5vw, 2.5rem);
-                    font-weight: 700;
-                    color: rgb(47, 255, 141);
-                    margin-left: 2rem;
-                    width: clamp(5rem, 7vw, 7rem);
-                }
+            label {
+                text-align: start;
+                letter-spacing: 1px;
+                line-height: clamp(1rem, 1.5vw, 1.5rem);
             }
+        }
+
+        .goal {
+            display: flex;
+            flex-direction: row;
+            width: 90%;
+            height: clamp(4rem, 5vw, 5rem);
+            background: #010522;
+            border-radius: 1rem;
+            color: #f5f5f5;
+            font-size: 1rem;
+            justify-content: start;
+            align-items: center;
+            text-align: center;
+            gap: 1rem;
+
+            label {
+                margin: 0;
+                font-weight: 600;
+                font-size: clamp(0.5rem, 1.5vw, 1.5rem);
+            }
+
+            .goalh1 {
+                letter-spacing: 1px;
+                font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+                font-weight: 700;
+                color: rgb(47, 255, 141);
+                margin-left: 2rem;
+                width: clamp(5rem, 7vw, 7rem);
+            }
+        }
     }
 
-    &#sec3{
-        background: linear-gradient(270deg,#000643,#010522);
+    &#sec3 {
+        background: linear-gradient(270deg, #000643, #010522);
         height: max-content;
         padding: clamp(5rem, 8vw, 8rem);
 
-        .box{
+        .box {
             display: flex;
-            flex-direction:column;
+            flex-direction: column;
             align-items: center;
             text-align: center;
 
-            .sec3h1{
+            .sec3h1 {
                 text-transform: uppercase;
                 font-size: clamp(1rem, 1.5vw, 1.5rem);
                 color: #5de195;
@@ -372,8 +370,8 @@ section{
                 font-weight: 700;
                 margin-bottom: 0.5rem;
             }
-    
-            .sec3h2{
+
+            .sec3h2 {
                 text-transform: uppercase;
                 font-size: clamp(1.5rem, 2.5vw, 2.5rem);
                 color: rgb(255, 255, 255);
@@ -381,16 +379,16 @@ section{
                 font-weight: 700;
                 margin-bottom: clamp(2rem, 4vw, 4rem);
             }
-    
-            .contjuegos{
-                display:flex;
+
+            .contjuegos {
+                display: flex;
                 flex-direction: row;
                 margin-bottom: clamp(1rem, 2vw, 2rem);
                 margin-top: clamp(1rem, 2vw, 2rem);
                 gap: clamp(1rem, 2vw, 2rem);
             }
-    
-            button{
+
+            button {
                 width: fit-content;
                 padding: clamp(0.5em, 0.8vw, 0.8em) clamp(1em, 1.3vw, 1.3em);
                 border: 4px solid #067f65;
@@ -400,7 +398,7 @@ section{
                 font-weight: bolder;
                 font-size: clamp(1rem, 1.3vw, 1.3rem);
 
-                &:hover{
+                &:hover {
                     border: rgb(0, 219, 208);
                     transform: scale(1.1) rotate(5deg);
                     background-color: rgb(0, 219, 190);
@@ -418,27 +416,28 @@ section{
             align-items: flex-end;
             perspective: 2500px;
         }
-        
+
         .cover-image {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        
+
         .wrapper {
             transition: all 0.5s;
             position: absolute;
             width: 100%;
             z-index: -1;
         }
-        
+
         .card:hover .wrapper {
-            transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+            transform: perspective(900px) translateY(-5%) rotateX(25deg)
+                translateZ(0);
             box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
             -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
             -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
         }
-        
+
         .wrapper::before,
         .wrapper::after {
             content: "";
@@ -453,28 +452,28 @@ section{
             top: 0;
             height: 100%;
             background-image: linear-gradient(
-            to top,
-            transparent 46%,
-            rgba(12, 13, 19, 0.5) 68%,
-            rgba(12, 13, 19) 97%
+                to top,
+                transparent 46%,
+                rgba(12, 13, 19, 0.5) 68%,
+                rgba(12, 13, 19) 97%
             );
         }
         .wrapper::after {
             bottom: 0;
             opacity: 1;
             background-image: linear-gradient(
-            to bottom,
-            transparent 46%,
-            rgba(12, 13, 19, 0.5) 68%,
-            rgba(12, 13, 19) 97%
+                to bottom,
+                transparent 46%,
+                rgba(12, 13, 19, 0.5) 68%,
+                rgba(12, 13, 19) 97%
             );
         }
-        
+
         .card:hover .wrapper::before,
         .wrapper::after {
             opacity: 1;
         }
-        
+
         .card:hover .wrapper::after {
             height: 120px;
         }
@@ -485,7 +484,7 @@ section{
         .card:hover .title {
             transform: translate3d(0%, -50px, 100px);
         }
-        
+
         .character {
             width: 100%;
             opacity: 0;
@@ -493,67 +492,66 @@ section{
             position: absolute;
             z-index: -1;
         }
-        
+
         .card:hover .character {
             opacity: 1;
             transform: translate3d(0%, -30%, 100px);
         }
     }
 
-    &#sec4{
+    &#sec4 {
         display: flex;
         background: url(Resources/FBSec2.png);
         background-attachment: fixed;
         background-size: cover;
         justify-content: center;
         padding: clamp(2rem, 6vw, 6rem);
-        padding-top: 6rem ;
+        padding-top: 6rem;
         padding-bottom: 6rem;
         height: max-content;
 
-            .box{
-                display: flex;
-                flex-direction: column;
-                place-items: center;
+        .box {
+            display: flex;
+            flex-direction: column;
+            place-items: center;
 
-                h3{
-                    text-transform: uppercase;
-                    font-size: clamp(1rem, 1.5vw, 1.5rem);
-                    color: rgb(0, 0, 0);
-                    margin: 0;
-                    font-weight: 400;
-                }
-
-                h1{
-                    text-transform: uppercase;
-                    font-size: clamp(2rem, 3vw, 3rem);
-                    color: rgb(0, 0, 0);
-                    margin: 0;
-                    font-weight: 700;
-                    margin-bottom: 3rem;
-                } 
-
-                .cansec4{
-                    display: flex;
-                    flex-wrap:wrap;
-                    gap: 1rem;
-
-                    .clip{
-                        width: clamp(10rem, 20vw, 30rem);
-                        height: clamp(25rem, 20vw, 20rem);
-                        background: black;
-                        border: wheat;
-                        flex: 1 0 40rem;
-                    }
-                }
+            h3 {
+                text-transform: uppercase;
+                font-size: clamp(1rem, 1.5vw, 1.5rem);
+                color: rgb(0, 0, 0);
+                margin: 0;
+                font-weight: 400;
             }
 
+            h1 {
+                text-transform: uppercase;
+                font-size: clamp(2rem, 3vw, 3rem);
+                color: rgb(0, 0, 0);
+                margin: 0;
+                font-weight: 700;
+                margin-bottom: 3rem;
+            }
+
+            .cansec4 {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+
+                .clip {
+                    width: clamp(10rem, 19vw, 25rem);
+                    height: clamp(25rem, 20vw, 20rem);
+                    background: black;
+                    border: wheat;
+                    flex: 1 0 40rem;
+                }
+            }
+        }
     }
-        
-    &#sec5{
+
+    &#sec5 {
         display: flex;
         height: max-content;
-        background: linear-gradient(90deg,#000643,#010522);
+        background: linear-gradient(90deg, #000643, #010522);
         padding: clamp(2rem, 5vw, 5rem);
         padding-right: clamp(3rem, 5vw, 10rem);
         padding-left: clamp(3rem, 5vw, 10rem);
@@ -563,15 +561,44 @@ section{
     }
 }
 
-.box{
+.box {
     transform: translateX(400%);
     transition: transform 0.6s ease;
 
     &:nth-of-type(even) {
         transform: translateX(-400%);
     }
-    
+
     &.show {
         transform: translateX(0);
     }
 }
+
+// @media (max-width: 800px) {
+//     .navbar {
+//         position: fixed;
+//         color: #ffffff;
+//         width: 100%;
+//         height: fit-content;
+
+//         .contnav {
+//             font-size: 1.2rem;
+//             gap: clamp(1.5rem, 2vw, 2rem);
+
+//             img {
+//                 padding: clamp(0.5rem, 0.8vw, 0.8rem);
+//                 height: clamp(2.5rem, 3vw, 3rem);
+//                 width: clamp(2.5rem, 3vw, 3rem);
+//                 object-fit: fill;
+//             }
+
+//             #navtit {
+//                 font-size: clamp(1.3rem, 1.7vw, 1.7rem);
+//             }
+
+//             .lblnav {
+//                 font-size: 1.2dvw;
+//             }
+//         }
+//     }
+// }
