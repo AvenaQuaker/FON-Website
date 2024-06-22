@@ -5,10 +5,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
 }
 
 body {
-  font-family: "Bahnschrift", "Roboto Condensed";
   margin: 0;
   padding: 0;
   background: #011522;
@@ -44,7 +44,6 @@ body ::-webkit-scrollbar-thumb {
 }
 
 .navbar {
-  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
   display: flex;
   flex-direction: row;
   position: fixed;
@@ -103,20 +102,23 @@ body ::-webkit-scrollbar-thumb {
 
 section {
   height: 60vh;
-  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
   overflow: hidden;
 }
 section #carlogo {
   background: url(Resources/LogoMinimalistaFON.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: clamp(4rem, 7vw, 7rem);
-  width: clamp(4rem, 7vw, 7rem);
-  margin-bottom: clamp(0.5rem, 1vw, 1rem);
+  height: 6.5dvw;
+  width: 6.5dvw;
+  margin-bottom: 2dvh;
   filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+  transition: transform 0.2s linear;
+}
+section #carlogo:hover {
+  transform: scale(1.05) rotate(2deg);
 }
 section#carouselsec {
-  height: clamp(50vh, 95vw, 95vh);
+  height: 50dvw;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   overflow: hidden;
 }
@@ -126,7 +128,7 @@ section#carouselsec #carouselPres {
   color: white;
   position: absolute;
   text-align: center;
-  top: clamp(30%, 50vw, 50%);
+  top: 24dvw;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -134,14 +136,18 @@ section#carouselsec #carouselPres {
   justify-content: center;
 }
 section#carouselsec #carouselPres label {
-  font-size: clamp(1rem, 1.7vw, 1.7rem);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 1.3dvw;
+  font-weight: 450;
+  letter-spacing: 1px;
 }
 section#carouselsec #carouselPres #carouseltitulo {
-  letter-spacing: 1px;
-  font-size: clamp(2.5rem, 5vw, 5rem);
+  letter-spacing: 0.05em;
+  font-size: 4.5dvw;
   font-weight: 1000;
   transition: transform 0.3s ease-in-out;
+  color: #e0dfdc;
+  margin-bottom: 1dvh;
+  text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9);
 }
 section#carouselsec #carouselPres #carouseltitulo:hover {
   transform: scale(1.05);
@@ -150,42 +156,33 @@ section#carouselsec #carouselPres #carsomos {
   text-transform: uppercase;
   color: rgb(5, 212, 112);
   letter-spacing: 1px;
-  font-size: clamp(1.2rem, 2vw, 2rem);
+  font-size: 1.8dvw;
   font-weight: 700;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
+}
+section#carouselsec #carouselPres #carsomos:hover {
+  transform: scale(1.1);
 }
 section#carouselsec #carouselImg {
+  position: relative;
   display: flex;
   flex-direction: row;
   transform: translateX(0);
   transition: transform 0.8s ease-in-out;
 }
-section#carouselsec #carouselImg img {
+section#carouselsec #carouselImg .contvideo {
+  position: relative;
   width: 100vw;
-  height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
-}
-section#carouselsec #carouselImg .contimg {
-  position: relative;
-  height: clamp(50vh, 95vw, 95vh);
-}
-section#carouselsec #carouselImg .contimg::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  position: absolute;
-  background: linear-gradient(0deg, black, transparent);
-  z-index: 1;
 }
 section#sec1 {
   display: flex;
   height: -moz-max-content;
   height: max-content;
   background: linear-gradient(90deg, #000643, #010522);
-  padding: 8dvh 12dvw;
+  padding: 8dvh 15dvw;
   color: white;
   justify-content: center;
   align-items: center;
@@ -213,9 +210,9 @@ section#sec1 .box .teaml h1 {
   margin-bottom: 1rem;
 }
 section#sec1 .box .teaml label {
-  font-size: 1dvw;
-  letter-spacing: 1px;
-  line-height: clamp(1rem, 2vw, 2rem);
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  letter-spacing: 1.5px;
+  line-height: 1.8rem;
   margin-bottom: 2rem;
 }
 section#sec1 .box .teaml button {
@@ -502,4 +499,99 @@ section#sec5 {
 }
 .box.show {
   transform: translateX(0);
+}
+
+@media (max-width: 1000px) {
+  .navbar {
+    height: -moz-max-content;
+    height: max-content;
+  }
+  .navbar .contnav {
+    font-size: 1.2rem;
+    gap: 0.8rem;
+  }
+  .navbar .contnav img {
+    height: 2.5rem;
+    width: 2.5rem;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+  .navbar .contnav #navtit {
+    font-size: 3dvw;
+  }
+  .navbar .contnav .lblnav {
+    font-size: 2dvw;
+  }
+  .navbar .contnav .navlog {
+    gap: 1.5dvw;
+  }
+  section {
+    height: 60vh;
+    overflow: hidden;
+  }
+  section #carlogo {
+    height: 8dvw;
+    width: 8dvw;
+    margin-bottom: 1.5dvh;
+  }
+  section#carouselsec {
+    height: 100dvw;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  section#carouselsec #carouselPres {
+    top: 40dvw;
+    width: 80%;
+  }
+  section#carouselsec #carouselPres label {
+    font-size: 2dvw;
+    font-weight: 450;
+    letter-spacing: 1px;
+  }
+  section#carouselsec #carouselPres #carouseltitulo {
+    letter-spacing: 0.05em;
+    font-size: 5.5dvw;
+    margin-bottom: 1.5dvh;
+  }
+  section#carouselsec #carouselPres #carsomos {
+    font-size: 2.5dvw;
+  }
+  section#carouselsec #carouselImg .contvideo {
+    height: 100dvw;
+  }
+  section#sec1 {
+    padding: 6dvh 8dvw;
+  }
+  section#sec1 .box {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  section#sec1 .box .teaml {
+    text-align: center;
+  }
+  section#sec1 .box .teaml h2 {
+    font-size: 3dvw;
+  }
+  section#sec1 .box .teaml h1 {
+    font-size: 4.5dvw;
+  }
+  section#sec1 .box .teaml label {
+    font-size: 3dvw;
+    letter-spacing: 1px;
+    line-height: 4dvh;
+    margin-bottom: 2rem;
+  }
+  section#sec1 .box .teaml button {
+    align-self: center;
+  }
+  section#sec1 .box .teamr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  section#sec1 .box .teamr img {
+    width: 70dvw;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
 }/*# sourceMappingURL=Main.css.map */

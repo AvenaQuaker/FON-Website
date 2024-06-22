@@ -6,10 +6,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Neue Haas Grotesk Display Pro", sans-serif;
 }
 
 body {
-    font-family: "Bahnschrift", "Roboto Condensed";
     margin: 0;
     padding: 0;
     background: #011522;
@@ -51,7 +51,6 @@ body {
 }
 
 .navbar {
-    font-family: "Neue Haas Grotesk Display Pro", sans-serif;
     display: flex;
     flex-direction: row;
     position: fixed;
@@ -117,22 +116,25 @@ body {
 
 section {
     height: 60vh;
-    //border: 1px solid rgb(255, 255, 255);
-    font-family: "Neue Haas Grotesk Display Pro", sans-serif;
     overflow: hidden;
 
     #carlogo {
         background: url(Resources/LogoMinimalistaFON.png);
         background-repeat: no-repeat;
         background-size: cover;
-        height: clamp(4rem, 7vw, 7rem);
-        width: clamp(4rem, 7vw, 7rem);
-        margin-bottom: clamp(0.5rem, 1vw, 1rem);
+        height: 6.5dvw;
+        width: 6.5dvw;
+        margin-bottom: 2dvh;
         filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+        transition: transform 0.2s linear;
+
+        &:hover {
+            transform: scale(1.05) rotate(2deg);
+        }
     }
 
     &#carouselsec {
-        height: clamp(50vh, 95vw, 95vh);
+        height: 50dvw;
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
         overflow: hidden;
 
@@ -142,7 +144,7 @@ section {
             color: white;
             position: absolute;
             text-align: center;
-            top: clamp(30%, 50vw, 50%);
+            top: 24dvw;
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 1;
@@ -150,15 +152,24 @@ section {
             justify-content: center;
 
             label {
-                font-size: clamp(1rem, 1.7vw, 1.7rem);
-                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                font-size: 1.3dvw;
+                font-weight: 450;
+                letter-spacing: 1px;
             }
 
             #carouseltitulo {
-                letter-spacing: 1px;
-                font-size: clamp(2.5rem, 5vw, 5rem);
+                letter-spacing: 0.05em;
+                font-size: 4.5dvw;
                 font-weight: 1000;
                 transition: transform 0.3s ease-in-out;
+                color: #e0dfdc;
+                margin-bottom: 1dvh;
+                text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c,
+                    0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626,
+                    0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020,
+                    0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a,
+                    0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414,
+                    0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9);
 
                 &:hover {
                     transform: scale(1.05);
@@ -169,38 +180,28 @@ section {
                 text-transform: uppercase;
                 color: rgb(5, 212, 112);
                 letter-spacing: 1px;
-                font-size: clamp(1.2rem, 2vw, 2rem);
+                font-size: 1.8dvw;
                 font-weight: 700;
                 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                transition: transform 0.3s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
             }
         }
 
         #carouselImg {
+            position: relative;
             display: flex;
             flex-direction: row;
             transform: translateX(0);
             transition: transform 0.8s ease-in-out;
 
-            img {
-                width: clamp(50vw, 100vw, 100vw);
-                height: 100vh;
-                object-fit: cover;
-            }
-
-            .contimg {
+            .contvideo {
                 position: relative;
-                height: clamp(50vh, 95vw, 95vh);
-
-                &::before {
-                    content: "";
-                    width: 100%;
-                    height: 100%;
-                    top: 0;
-                    right: 0;
-                    position: absolute;
-                    background: linear-gradient(0deg, black, transparent);
-                    z-index: 1;
-                }
+                width: 100vw;
+                object-fit: cover;
             }
         }
     }
@@ -209,7 +210,7 @@ section {
         display: flex;
         height: max-content;
         background: linear-gradient(90deg, #000643, #010522);
-        padding: 8dvh 12dvw;
+        padding: 8dvh 15dvw;
         color: white;
         justify-content: center;
         align-items: center;
@@ -239,9 +240,9 @@ section {
                 }
 
                 label {
-                    font-size: 1dvw;
-                    letter-spacing: 1px;
-                    line-height: clamp(1rem, 2vw, 2rem);
+                    font-size: clamp(1rem, 1.5vw, 1.5rem);
+                    letter-spacing: 1.5px;
+                    line-height: 1.8rem;
                     margin-bottom: 2rem;
                 }
 
@@ -574,31 +575,118 @@ section {
     }
 }
 
-// @media (max-width: 800px) {
-//     .navbar {
-//         position: fixed;
-//         color: #ffffff;
-//         width: 100%;
-//         height: fit-content;
+@media (max-width: 1000px) {
+    .navbar {
+        height: max-content;
 
-//         .contnav {
-//             font-size: 1.2rem;
-//             gap: clamp(1.5rem, 2vw, 2rem);
+        .contnav {
+            font-size: 1.2rem;
+            gap: 0.8rem;
 
-//             img {
-//                 padding: clamp(0.5rem, 0.8vw, 0.8rem);
-//                 height: clamp(2.5rem, 3vw, 3rem);
-//                 width: clamp(2.5rem, 3vw, 3rem);
-//                 object-fit: fill;
-//             }
+            img {
+                height: 2.5rem;
+                width: 2.5rem;
+                object-fit: fill;
+            }
 
-//             #navtit {
-//                 font-size: clamp(1.3rem, 1.7vw, 1.7rem);
-//             }
+            #navtit {
+                font-size: 3dvw;
+            }
 
-//             .lblnav {
-//                 font-size: 1.2dvw;
-//             }
-//         }
-//     }
-// }
+            .lblnav {
+                font-size: 2dvw;
+            }
+
+            .navlog {
+                gap: 1.5dvw;
+            }
+        }
+    }
+
+    section {
+        height: 60vh;
+        overflow: hidden;
+
+        #carlogo {
+            height: 8dvw;
+            width: 8dvw;
+            margin-bottom: 1.5dvh;
+        }
+
+        &#carouselsec {
+            height: 100dvw;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+
+            #carouselPres {
+                top: 40dvw;
+                width: 80%;
+
+                label {
+                    font-size: 2dvw;
+                    font-weight: 450;
+                    letter-spacing: 1px;
+                }
+
+                #carouseltitulo {
+                    letter-spacing: 0.05em;
+                    font-size: 5.5dvw;
+                    margin-bottom: 1.5dvh;
+                }
+
+                #carsomos {
+                    font-size: 2.5dvw;
+                }
+            }
+
+            #carouselImg {
+                .contvideo {
+                    height: 100dvw;
+                }
+            }
+        }
+
+        &#sec1 {
+            padding: 6dvh 8dvw;
+
+            .box {
+                display: flex;
+                flex-direction: column;
+                gap: 4rem;
+
+                .teaml {
+                    text-align: center;
+
+                    h2 {
+                        font-size: 3dvw;
+                    }
+
+                    h1 {
+                        font-size: 4.5dvw;
+                    }
+
+                    label {
+                        font-size: 3dvw;
+                        letter-spacing: 1px;
+                        line-height: 4dvh;
+                        margin-bottom: 2rem;
+                    }
+
+                    button {
+                        align-self: center;
+                    }
+                }
+
+                .teamr {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    img {
+                        width: 70dvw;
+                        object-fit: fill;
+                    }
+                }
+            }
+        }
+    }
+}
