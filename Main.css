@@ -97,14 +97,14 @@ body ::-webkit-scrollbar-thumb {
 }
 .navbar .contnav .lblnav {
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 300;
   letter-spacing: 1px;
   color: rgb(255, 255, 255);
   text-decoration: none;
-  transition: transform 0.2s ease-in-out;
+  transition: font-weight 0.2s linear;
 }
 .navbar .contnav .lblnav:hover {
-  transform: translateY(-5px) scale(1.1);
+  font-weight: 700;
 }
 .navbar.scrolled {
   background-color: rgb(1, 2, 14);
@@ -662,6 +662,87 @@ section#sec5 form button::before {
 section#sec5 form button:hover::before {
   width: 250%;
 }
+section#sec6 {
+  background: url(Resources/FBSec2.png);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+footer {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  background-color: #010522;
+  height: 8dvh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+footer a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-weight: 400;
+  transition: font-weight 0.2s linear;
+}
+footer a:hover {
+  font-weight: 700;
+}
+footer .fotleft {
+  display: flex;
+  position: absolute;
+  left: 0;
+  gap: 1rem;
+  align-items: center;
+  margin: 1dvw;
+}
+footer .fotleft button {
+  width: 5dvh;
+  height: 5dvh;
+  border-radius: 50%;
+}
+footer .fotleft button img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+footer button {
+  width: 6dvh;
+  height: 6dvh;
+  outline: none;
+  border: none;
+  transition: transform 0.2s linear;
+}
+footer button img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+footer button:hover {
+  transform: scale(1.05);
+}
+footer .fotright {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  margin: 1dvw;
+}
+footer .fotright button {
+  width: 5dvh;
+  height: 5dvh;
+  border-radius: 50%;
+}
+footer .fotright button img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
 
 .box {
   transform: translateX(400%);
@@ -894,5 +975,15 @@ section#sec5 form button:hover::before {
     padding: 0.7em 1.2em;
     letter-spacing: 2px;
     font-size: 0.9rem;
+  }
+  footer .fotleft a {
+    display: none;
+    text-decoration: none;
+    color: whitesmoke;
+  }
+  footer .fotright a {
+    display: none;
+    text-decoration: none;
+    color: whitesmoke;
   }
 }/*# sourceMappingURL=Main.css.map */
