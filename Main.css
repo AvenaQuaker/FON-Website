@@ -538,12 +538,13 @@ section#sec5 img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  background-attachment: fixed;
 }
 section#sec5 form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 4dvw 2dvw;
+  place-items: center;
+  padding: 5dvw 2dvw;
   border-radius: 1rem;
   gap: 0.5rem;
 }
@@ -827,5 +828,42 @@ section#sec5 form button:hover::before {
     border: wheat;
     height: 52dvw;
     width: 90dvw;
+  }
+  section#sec5 {
+    display: grid;
+    grid-template-columns: 0.1fr 0.8fr 0.1fr;
+  }
+  section#sec5 form img {
+    width: 30dvw;
+    height: 30dvw;
+  }
+  section#sec5 form h3 {
+    font-size: 3dvw;
+  }
+  section#sec5 form h2 {
+    font-size: 4dvw;
+  }
+  section#sec5 form h4 {
+    font-size: 1.7dvw;
+  }
+  section#sec5 form label {
+    font-size: 2dvw;
+  }
+  section#sec5 form input {
+    width: 50%;
+    height: 3dvh;
+    margin-bottom: 0.5rem;
+    font-size: 1.8dvw;
+  }
+  section#sec5 form textarea {
+    width: 70%;
+    height: 8dvh;
+    margin-bottom: 1rem;
+    font-size: 1.8dvw;
+  }
+  section#sec5 form button {
+    padding: 0.5em 1em;
+    letter-spacing: 2px;
+    font-size: 0.7rem;
   }
 }/*# sourceMappingURL=Main.css.map */

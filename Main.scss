@@ -623,13 +623,14 @@ section {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            background-attachment: fixed;
         }
 
         form {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            padding: 4dvw 2dvw;
+            place-items: center;
+            padding: 5dvw 2dvw;
             border-radius: 1rem;
             gap: 0.5rem;
 
@@ -972,6 +973,52 @@ section {
                     border: wheat;
                     height: 52dvw;
                     width: 90dvw;
+                }
+            }
+        }
+
+        &#sec5 {
+            display: grid;
+            grid-template-columns: 0.1fr 0.8fr 0.1fr;
+
+            form {
+                img {
+                    width: 30dvw;
+                    height: 30dvw;
+                }
+
+                h3 {
+                    font-size: 3dvw;
+                }
+                h2 {
+                    font-size: 4dvw;
+                }
+                h4 {
+                    font-size: 1.7dvw;
+                }
+
+                label {
+                    font-size: 2dvw;
+                }
+
+                input {
+                    width: 50%;
+                    height: 3dvh;
+                    margin-bottom: 0.5rem;
+                    font-size: 1.8dvw;
+                }
+
+                textarea {
+                    width: 70%;
+                    height: 8dvh;
+                    margin-bottom: 1rem;
+                    font-size: 1.8dvw;
+                }
+
+                button {
+                    padding: 0.5em 1em;
+                    letter-spacing: 2px;
+                    font-size: 0.7rem;
                 }
             }
         }
