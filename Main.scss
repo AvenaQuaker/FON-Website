@@ -367,6 +367,7 @@ section {
             transition: box-shadow 0.2s linear, transform 0.2s linear;
 
             .goalh1 {
+                font-family: var(--Font1);
                 letter-spacing: 1px;
                 font-size: clamp(1.8rem, 2.5vw, 2.5rem);
                 font-weight: 700;
@@ -616,8 +617,8 @@ section {
         padding: 2dvw 2dvw;
 
         .contnav {
-            font-size: 1.2rem;
-            gap: 4dvw;
+            font-size: 1.4rem;
+            gap: 3.5dvw;
 
             img {
                 height: 2.5rem;
@@ -626,11 +627,11 @@ section {
             }
 
             #navtit {
-                font-size: 3dvw;
+                font-size: 3.2dvw;
             }
 
             .lblnav {
-                font-size: 2dvw;
+                font-size: 2.4dvw;
             }
 
             .navlog {
@@ -649,8 +650,8 @@ section {
         overflow: hidden;
 
         #carlogo {
-            height: 8dvw;
-            width: 8dvw;
+            height: 8.5dvw;
+            width: 8.5dvw;
             margin-bottom: 1.5dvh;
         }
 
@@ -663,7 +664,7 @@ section {
                 width: 80%;
 
                 label {
-                    font-size: 2dvw;
+                    font-size: 2.2dvw;
                     font-weight: 450;
                     letter-spacing: 1px;
                 }
@@ -706,7 +707,7 @@ section {
                     }
 
                     label {
-                        font-size: 2dvw;
+                        font-size: 2.1dvw;
                         letter-spacing: 1px;
                         line-height: 1.5;
                         margin-bottom: 2rem;
@@ -738,7 +739,7 @@ section {
 
             img {
                 width: 100%;
-                height: 35dvh;
+                height: 20rem;
                 object-fit: fill;
             }
 
@@ -748,21 +749,22 @@ section {
                 gap: 1rem;
 
                 h1 {
-                    font-size: 4dvw;
+                    font-size: 4.2dvw;
                 }
             }
 
             .goal {
                 width: 100%;
                 gap: 0.3rem;
+                padding: 2.5dvw;
 
                 label {
-                    font-size: 2.5dvw;
+                    font-size: 2.7dvw;
                 }
 
                 .goalh1 {
                     letter-spacing: 1px;
-                    font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+                    font-size: clamp(2rem, 2.7vw, 2.7rem);
                     font-weight: 700;
                     color: rgb(47, 255, 141);
                     margin-left: 2rem;
@@ -809,7 +811,7 @@ section {
         }
 
         &#sec4 {
-            padding: 6dvw;
+            padding: 6dvw 3dvw;
             height: max-content;
 
             .box {
@@ -823,11 +825,11 @@ section {
                     "box4";
 
                 h3 {
-                    font-size: 2dvw;
+                    font-size: 2.3dvw;
                 }
 
                 h1 {
-                    font-size: 4dvw;
+                    font-size: 4.2dvw;
                     margin-bottom: 1rem;
                 }
 
@@ -835,8 +837,8 @@ section {
                     margin: 0.5rem;
                     background: black;
                     border: wheat;
-                    height: 48dvw;
-                    width: 75dvw;
+                    height: 52dvw;
+                    width: 90dvw;
                 }
             }
         }
