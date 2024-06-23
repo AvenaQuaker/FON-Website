@@ -465,48 +465,42 @@ section#sec3 .box a .card:hover .character {
   transform: translate3d(0%, -30%, 100px);
 }
 section#sec4 {
-  display: flex;
   background: url(Resources/FBSec2.png);
   background-attachment: fixed;
   background-size: cover;
   justify-content: center;
-  padding: clamp(2rem, 6vw, 6rem);
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding: 6dvw;
   height: -moz-max-content;
   height: max-content;
 }
 section#sec4 .box {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-areas: "h3 h3" "h1 h1" "box1 box2" "box3 box4";
   place-items: center;
 }
 section#sec4 .box h3 {
+  grid-area: h3;
   text-transform: uppercase;
-  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  font-size: 1.3dvw;
   color: rgb(0, 0, 0);
   margin: 0;
-  font-weight: 400;
+  font-weight: 600;
 }
 section#sec4 .box h1 {
+  grid-area: h1;
+  font-family: var(--Font1);
   text-transform: uppercase;
-  font-size: clamp(2rem, 3vw, 3rem);
+  font-size: 2.5dvw;
   color: rgb(0, 0, 0);
-  margin: 0;
   font-weight: 700;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
-section#sec4 .box .cansec4 {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-section#sec4 .box .cansec4 .clip {
-  width: clamp(10rem, 19vw, 25rem);
-  height: clamp(25rem, 20vw, 20rem);
+section#sec4 .box .clip {
+  margin: 0.5rem;
   background: black;
   border: wheat;
-  flex: 1 0 40rem;
+  height: 23dvw;
+  width: 40dvw;
 }
 section#sec5 {
   display: flex;
