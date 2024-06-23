@@ -161,7 +161,7 @@ section#carouselsec #carouselPres #carouseltitulo:hover {
 }
 section#carouselsec #carouselPres #carsomos {
   text-transform: uppercase;
-  color: rgb(5, 212, 112);
+  color: #05d470;
   letter-spacing: 1px;
   font-size: 1.8dvw;
   font-weight: 700;
@@ -324,6 +324,10 @@ section#sec2 .goal {
   gap: 1rem;
   transition: box-shadow 0.2s linear, transform 0.2s linear;
 }
+section#sec2 .goal:hover {
+  box-shadow: 0 0 1.5rem rgb(0, 0, 0);
+  transform: scale(1.05);
+}
 section#sec2 .goal .goalh1 {
   font-family: var(--Font1);
   letter-spacing: 1px;
@@ -332,10 +336,6 @@ section#sec2 .goal .goalh1 {
   color: rgb(47, 255, 141);
   margin-left: 2rem;
   margin-right: 1rem;
-}
-section#sec2 .goal:hover {
-  box-shadow: 0 0 1.5rem rgb(0, 0, 0);
-  transform: scale(1.05);
 }
 section#sec3 {
   background: linear-gradient(270deg, #000643, #010522);
@@ -358,6 +358,10 @@ section#sec3 .box .sec3h1 {
   margin: 0;
   font-weight: 700;
   margin-bottom: 0.5rem;
+  transition: transform 0.2s linear;
+}
+section#sec3 .box .sec3h1:hover {
+  transform: scale(1.05);
 }
 section#sec3 .box .sec3h2 {
   grid-area: h1;
@@ -368,6 +372,10 @@ section#sec3 .box .sec3h2 {
   margin: 0;
   font-weight: 700;
   margin-bottom: clamp(2rem, 4vw, 4rem);
+  transition: transform 0.2s linear;
+}
+section#sec3 .box .sec3h2:hover {
+  transform: scale(1.05);
 }
 section#sec3 .box button {
   grid-area: btn;
@@ -486,6 +494,10 @@ section#sec4 .box h3 {
   color: rgb(0, 0, 0);
   margin: 0;
   font-weight: 600;
+  transition: transform 0.2s linear;
+}
+section#sec4 .box h3:hover {
+  transform: scale(1.05);
 }
 section#sec4 .box h1 {
   grid-area: h1;
@@ -495,6 +507,10 @@ section#sec4 .box h1 {
   color: rgb(0, 0, 0);
   font-weight: 700;
   margin-bottom: 2rem;
+  transition: transform 0.2s linear;
+}
+section#sec4 .box h1:hover {
+  transform: scale(1.05);
 }
 section#sec4 .box .clip {
   margin: 0.5rem;
@@ -502,18 +518,120 @@ section#sec4 .box .clip {
   border: wheat;
   height: 23dvw;
   width: 40dvw;
+  transition: box-shadow 0.2s linear, transform 0.2s linear;
+}
+section#sec4 .box .clip:hover {
+  box-shadow: 0 0 1.5rem rgb(0, 0, 0);
+  transform: scale(1.05);
 }
 section#sec5 {
-  display: flex;
+  display: grid;
+  grid-template-columns: 0.25fr 0.5fr 0.25fr;
+  grid-auto-rows: auto;
   height: -moz-max-content;
   height: max-content;
-  background: linear-gradient(90deg, #000643, #010522);
-  padding: clamp(2rem, 5vw, 5rem);
-  padding-right: clamp(3rem, 5vw, 10rem);
-  padding-left: clamp(3rem, 5vw, 10rem);
+  background: linear-gradient(180deg, #000643, #010522);
   color: white;
-  justify-content: center;
+}
+section#sec5 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section#sec5 form {
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  padding: 4dvw 2dvw;
+  border-radius: 1rem;
+  gap: 0.5rem;
+}
+section#sec5 form img {
+  width: 13rem;
+  height: 13rem;
+  border-radius: 50%;
+  -o-object-fit: fill;
+     object-fit: fill;
+  border: 3px solid #000000;
+}
+section#sec5 form h3 {
+  font-size: 1.5dvw;
+  font-family: var(--Font1);
+  color: #05d470;
+}
+section#sec5 form h2 {
+  text-transform: uppercase;
+  font-size: 2.5dvw;
+  font-family: var(--Font1);
+}
+section#sec5 form h4 {
+  font-size: 1.2dvw;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+section#sec5 form label {
+  font-size: 1dvw;
+}
+section#sec5 form input {
+  width: 40%;
+  height: 4dvh;
+  border-radius: 5px;
+  outline: none;
+  text-align: center;
+  margin-bottom: 1rem;
+  background: #e0e0e0;
+  color: #000000;
+  font-size: 0.8dvw;
+}
+section#sec5 form textarea {
+  background: #e0e0e0;
+  width: 60%;
+  text-align: center;
+  outline: none;
+  height: 10dvh;
+  padding: 0.5dvw;
+  margin-bottom: 1.5rem;
+  color: #000000;
+  font-size: 0.8dvw;
+}
+section#sec5 form button {
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #115e37;
+  transition: all 1s;
+  background: #c2ffe1;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+  outline: 2px solid #c2ffe1;
+}
+section#sec5 form button:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+  outline: 2px solid #70caa4;
+  box-shadow: 4px 5px 17px -4px #26916d;
+}
+section#sec5 form button::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #2caf72;
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+section#sec5 form button:hover::before {
+  width: 250%;
 }
 
 .box {
@@ -535,7 +653,7 @@ section#sec5 {
   }
   .navbar .contnav {
     font-size: 1.4rem;
-    gap: 3.5dvw;
+    gap: 3dvw;
   }
   .navbar .contnav img {
     height: 2.5rem;
@@ -545,6 +663,7 @@ section#sec5 {
   }
   .navbar .contnav #navtit {
     font-size: 3.2dvw;
+    text-align: center;
   }
   .navbar .contnav .lblnav {
     font-size: 2.4dvw;
