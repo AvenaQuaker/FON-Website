@@ -5,6 +5,7 @@ let idx = 0;
 let contcarusel = document.getElementById("carouselImg");
 let caruselimg = document.querySelectorAll("#carouselImg .contvideo");
 let boxes = document.querySelectorAll(".box");
+let navbar = document.querySelector("nav");
 
 // Funcion para cambiar imagenes
 let intervalo = setInterval(() => {
@@ -31,4 +32,26 @@ window.addEventListener("scroll", () => {
             box.classList.remove("show");
         }
     });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const seccion = document.querySelector("#carouselsec");
+
+    const configuracion = {
+        root: null,
+        threshold: 0.1,
+        rootMargin: "0px",
+    };
+
+    const Observador = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                navbar.classList.remove("scrolled");
+            } else {
+                navbar.classList.add("scrolled");
+            }
+        });
+    }, configuracion);
+
+    Observador.observe(seccion);
 });

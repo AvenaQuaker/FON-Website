@@ -56,9 +56,10 @@ body ::-webkit-scrollbar-thumb {
   width: 100%;
   height: -moz-max-content;
   height: max-content;
-  background: linear-gradient(180deg, rgb(0, 0, 0) 60%, transparent);
   z-index: 2;
   padding: 0.5rem 1rem;
+  background-color: rgba(1, 2, 14, 0.3);
+  transition: background-color 0.2s linear;
 }
 .navbar .contnav {
   display: flex;
@@ -104,6 +105,9 @@ body ::-webkit-scrollbar-thumb {
 }
 .navbar .contnav .lblnav:hover {
   transform: translateY(-5px) scale(1.1);
+}
+.navbar.scrolled {
+  background-color: rgb(1, 2, 14);
 }
 
 section {
@@ -555,16 +559,28 @@ section#sec5 form img {
   -o-object-fit: fill;
      object-fit: fill;
   border: 3px solid #000000;
+  transition: transform 0.2s linear;
+}
+section#sec5 form img:hover {
+  transform: scale(1.05);
 }
 section#sec5 form h3 {
   font-size: 1.5dvw;
   font-family: var(--Font1);
   color: #05d470;
+  transition: transform 0.2s linear;
+}
+section#sec5 form h3:hover {
+  transform: scale(1.05);
 }
 section#sec5 form h2 {
   text-transform: uppercase;
   font-size: 2.5dvw;
   font-family: var(--Font1);
+  transition: transform 0.2s linear;
+}
+section#sec5 form h2:hover {
+  transform: scale(1.05);
 }
 section#sec5 form h4 {
   font-size: 1.2dvw;
@@ -574,6 +590,10 @@ section#sec5 form h4 {
 }
 section#sec5 form label {
   font-size: 1dvw;
+  transition: transform 0.2s linear;
+}
+section#sec5 form label:hover {
+  transform: translateY(-0.1rem);
 }
 section#sec5 form input {
   width: 40%;
@@ -582,9 +602,13 @@ section#sec5 form input {
   outline: none;
   text-align: center;
   margin-bottom: 1rem;
-  background: #e0e0e0;
+  background-color: #e0e0e0;
   color: #000000;
   font-size: 0.8dvw;
+  transition: background-color 0.2s linear;
+}
+section#sec5 form input:focus {
+  background-color: #9b9b9b;
 }
 section#sec5 form textarea {
   background: #e0e0e0;
@@ -596,6 +620,10 @@ section#sec5 form textarea {
   margin-bottom: 1.5rem;
   color: #000000;
   font-size: 0.8dvw;
+  transition: background-color 0.2s linear;
+}
+section#sec5 form textarea:focus {
+  background-color: #9b9b9b;
 }
 section#sec5 form button {
   padding: 1em 2em;
@@ -838,32 +866,33 @@ section#sec5 form button:hover::before {
     height: 30dvw;
   }
   section#sec5 form h3 {
-    font-size: 3dvw;
+    font-size: 3.2dvw;
   }
   section#sec5 form h2 {
-    font-size: 4dvw;
+    font-size: 4.2dvw;
   }
   section#sec5 form h4 {
-    font-size: 1.7dvw;
+    font-size: 2dvw;
+    margin-bottom: 3dvh;
   }
   section#sec5 form label {
-    font-size: 2dvw;
+    font-size: 2.2dvw;
   }
   section#sec5 form input {
-    width: 50%;
-    height: 3dvh;
-    margin-bottom: 0.5rem;
-    font-size: 1.8dvw;
+    width: 55%;
+    height: 3.5dvh;
+    margin-bottom: 0.7rem;
+    font-size: 2dvw;
   }
   section#sec5 form textarea {
-    width: 70%;
-    height: 8dvh;
-    margin-bottom: 1rem;
-    font-size: 1.8dvw;
+    width: 75%;
+    height: 8.5dvh;
+    margin-bottom: 2dvh;
+    font-size: 2dvw;
   }
   section#sec5 form button {
-    padding: 0.5em 1em;
+    padding: 0.7em 1.2em;
     letter-spacing: 2px;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
 }/*# sourceMappingURL=Main.css.map */
