@@ -526,7 +526,7 @@ section#sec4 .box .clip {
 }
 section#sec4 .box .clip:hover {
   box-shadow: 0 0 1.5rem rgb(0, 0, 0);
-  transform: scale(1.05);
+  transform: scale(1.01);
 }
 section#sec5 {
   display: grid;
@@ -667,6 +667,170 @@ section#sec6 {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 3rem 0;
+  height: -moz-max-content;
+  height: max-content;
+}
+section#sec6 .box {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
+section#sec6 .box h3 {
+  font-size: 1.5dvw;
+  color: #121212;
+}
+section#sec6 .box h1 {
+  font-size: 2.5dvw;
+  font-family: var(--Font1);
+  color: #121212;
+}
+section#sec6 .box article {
+  display: flex;
+  position: relative;
+  place-items: center;
+  width: 100vw;
+  height: 50dvh;
+  padding: 2dvw 5dvw;
+  margin: 0 10rem;
+}
+section#sec6 .box article .presentacion {
+  display: flex;
+  width: 200vw;
+  height: 100%;
+  position: relative;
+  place-items: center;
+  gap: 1.5rem;
+  animation: animation 25s linear infinite;
+}
+section#sec6 .box article .presentacion .cartapres {
+  display: flex;
+  width: 40vw;
+  height: 100%;
+  transition: transform 0.2s linear, box-shadow 0.2s linear;
+  position: relative;
+  border-radius: 1rem;
+}
+section#sec6 .box article .presentacion .cartapres .cartaimg {
+  width: 40vw;
+  height: 100%;
+  z-index: 2;
+}
+section#sec6 .box article .presentacion .cartapres .cartaimg img {
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+section#sec6 .box article .presentacion .cartapres .cartavideo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+section#sec6 .box article .presentacion .cartapres .cartavideo video {
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+section#sec6 .box article .presentacion .cartapres:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 1.5rem rgb(0, 0, 0);
+}
+@keyframes animation {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-115vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+section#sec6 .box .btn-conteiner {
+  display: flex;
+  justify-content: center;
+  --color-text: #ffffff;
+  --color-background: #13a9ff;
+  --color-outline: #14b5ff80;
+  --color-shadow: #00000080;
+  border: none;
+  background: transparent;
+}
+section#sec6 .box .btn-content {
+  display: flex;
+  align-items: center;
+  padding: 0.5dvw 1dvw;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.5dvw;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: 1s;
+  border-radius: 100px;
+  box-shadow: 0 0 0.2em 0 var(--color-background);
+}
+section#sec6 .box .btn-content:hover, section#sec6 .box .btn-content:focus {
+  transition: 0.5s;
+  animation: btn-content 1s;
+  outline: 0.1em solid transparent;
+  outline-offset: 0.2em;
+  box-shadow: 0 0 0.4em 0 var(--color-background);
+}
+section#sec6 .box .btn-content .icon-arrow {
+  transition: 0.5s;
+  margin-right: 0px;
+  transform: scale(0.6);
+}
+section#sec6 .box .btn-content:hover .icon-arrow {
+  transition: 0.5s;
+  margin-right: 25px;
+}
+section#sec6 .box .btn-content .icon-arrow {
+  width: 2dvw;
+  margin-left: 0.5dvw;
+  position: relative;
+  top: 6%;
+}
+section#sec6 .box .btn-content #arrow-icon-one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+section#sec6 .box .btn-content #arrow-icon-two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+section#sec6 .box .btn-content:hover #arrow-icon-three {
+  animation: color_anim 1s infinite 0.2s;
+}
+section#sec6 .box .btn-content:hover #arrow-icon-one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+section#sec6 .box .btn-content:hover #arrow-icon-two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+@keyframes color_anim {
+  0% {
+    fill: white;
+  }
+  50% {
+    fill: var(--color-background);
+  }
+  100% {
+    fill: white;
+  }
+}
+@keyframes btn-content {
+  0% {
+    outline: 0.2em solid var(--color-background);
+    outline-offset: 0;
+  }
 }
 
 footer {
@@ -976,6 +1140,36 @@ footer .fotright button img {
     letter-spacing: 2px;
     font-size: 0.9rem;
   }
+  section#sec6 {
+    padding: 2rem 0;
+  }
+  section#sec6 .box h3 {
+    font-size: 2dvw;
+  }
+  section#sec6 .box h1 {
+    font-size: 3dvw;
+  }
+  section#sec6 .box article {
+    height: 20dvh;
+  }
+  section#sec6 .box article .presentacion {
+    gap: 1rem;
+  }
+  @keyframes animation {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-125vw);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  section#sec6 .box .btn-content {
+    padding: 1vw 2.5dvw;
+    font-size: 2.5dvw;
+  }
   footer .fotleft a {
     display: none;
     text-decoration: none;
@@ -985,5 +1179,21 @@ footer .fotright button img {
     display: none;
     text-decoration: none;
     color: whitesmoke;
+  }
+}
+@keyframes Aparecer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes Desaparecer {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }/*# sourceMappingURL=Main.css.map */

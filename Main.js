@@ -36,6 +36,25 @@ window.addEventListener("scroll", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
     const seccion = document.querySelector("#carouselsec");
+    const videos1 = document.querySelectorAll("#carouselImg video");
+    const Presentacion = document.querySelectorAll("#sec6videos .cartapres");
+
+    Presentacion.forEach((elemento) => {
+        elemento.addEventListener("mouseover", () => {
+            elemento.querySelector(".cartavideo").children[0].play();
+            elemento.querySelector(".cartaimg").style.animation =
+                "Desaparecer 0.5s linear forwards";
+        });
+        elemento.addEventListener("mouseout", () => {
+            setTimeout(() => {
+                elemento.querySelector(".cartaimg").style.animation =
+                    "Aparecer 1s linear forwards";
+            }, 1000);
+            setTimeout(() => {
+                elemento.querySelector(".cartavideo").children[0].pause();
+            }, 2000);
+        });
+    });
 
     const configuracion = {
         root: null,
@@ -46,12 +65,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const Observador = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
+                //Si esta enfocada
                 navbar.classList.remove("scrolled");
+                videos1.forEach((video) => {
+                    video.play();
+                });
             } else {
+                // Si no esta enfocada
                 navbar.classList.add("scrolled");
+                videos1.forEach((video) => {
+                    video.pause();
+                });
             }
         });
     }, configuracion);
-
     Observador.observe(seccion);
 });
